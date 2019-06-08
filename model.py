@@ -7,6 +7,7 @@ import pandas as pd
 #input pandas dataframes of the lemmatized headlines and labels
 class implement_model():
     def __init__(self,headlines,labels,vocab_size):
+        print(type(headlines))
         test_proportion= 0.3
         #pad everything to just 10 words
         max_len = 10
@@ -17,8 +18,8 @@ class implement_model():
 
         model = self.build_model(vocab_size,layer_size)
 
-        no_epochs = 10
-        batch_size = 100
+        no_epochs = 40
+        batch_size =512
         self.train_model(model,training_data,no_epochs,batch_size)
 
     #splits into training & test sets
@@ -39,13 +40,10 @@ class implement_model():
         model.add(keras.layers.GlobalAveragePooling1D())
         model.add(keras.layers.Dense(layer_size,activation=tf.nn.relu))
         model.add(keras.layers.Dense(1,activation=tf.nn.sigmoid))
-        model.compile(optimizer='adam',loss='binary_crossentropy',metrics=['acc'])
+        model.compile(optimizer='RMSprop',loss='binary_crossentropy',metrics=['acc'])
         return model
 
     def train_model(self,model,data,no_epochs,batch_size):
-        data
-
-
         history = model.fit(data[0],
                 data[1],
                 epochs=no_epochs,
