@@ -43,8 +43,10 @@ Next, I used nltk's lemmatization tool - reducing words to some stem form in Eng
 
     "fascinate case eat lab-grown meat"
 
-The words can then be converted to a sequence of numbers in a dictionary mapping and the headlines
-can be converted into a sequence of numbers padded to the same length, which we can feed to the neural network.
+The words can then be converted to a sequence of numbers in a dictionary mapping.
+
+We can use the mapping to convert headlines into a sequence of numbers and pad them to the same length. The resulting vectors
+can be fed into the neural network.
 
 
 ### Results
