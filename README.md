@@ -9,10 +9,12 @@ with credit to https://rishabhmisra.github.io/publications/
 To run with anaconda, download and extract the dataset(place the folder in the same directory)
 
 Make an anaconda environment and run:
-  conda install --file requirements.txt
+
+    conda install --file requirements.txt
 
 Then to train and evaluate the model, run:
-  python main.py
+
+    python main.py
 
 
 ## Implementation
@@ -30,14 +32,16 @@ expanded by using the url as another input, or scraping text from the actual art
 ### Encoding the headlines
 
 To start off with, we have a headline such as:
-  "the fascinating case for eating lab-grown meat"
+
+    "the fascinating case for eating lab-grown meat"
 
 Firstly, I used nltk to remove the stopwords - common words such as "a, the, it":
-  "fascinating case eating lab-grown meat"
+
+    "fascinating case eating lab-grown meat"
 
 Next, I used nltk's lemmatization tool - reducing words to some stem form in English
 
-  "fascinate case eat lab-grown meat"
+    "fascinate case eat lab-grown meat"
 
 The words can then be converted to a sequence of numbers in a dictionary mapping and the headlines
 can be converted into a sequence of numbers padded to the same length, which we can feed to the neural network.
@@ -48,6 +52,6 @@ can be converted into a sequence of numbers padded to the same length, which we 
 Validation and training results with a batch size of 1000 over 10 epochs, and a split of
 30/70 for validation/training data:
 
-![alt text]("https://github.com/rowanho/sarcasm_detection/blob/master/graphs/val.png" validation)
+![alt text](https://github.com/rowanho/sarcasm_detection/blob/master/graphs/val.png "validation")
 
 The model achieved around 80% accuracy on the final test data
