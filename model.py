@@ -63,7 +63,7 @@ class implement_model():
         plt.xlabel("Epoch")
         plt.ylabel("Accuracy")
         plt.legend()
-        plt.xlim([1,max(history.epoch)])
+        plt.xlim([0,max(history.epoch)])
         plt.title("Validation vs training accuracy")
         plt.show()
 
