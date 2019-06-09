@@ -2,9 +2,10 @@
 
 Using tf/keras and nltk to determine whether a news headline is sarcastic or not
 
-## Running the project
 The dataset can be found at https://www.kaggle.com/rmisra/news-headlines-dataset-for-sarcasm-detection/kernels
 with credit to https://rishabhmisra.github.io/publications/
+
+## Running the project
 
 To run with anaconda, download and extract the dataset(place the folder in the same directory)
 
