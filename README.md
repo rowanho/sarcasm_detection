@@ -36,7 +36,9 @@ To start off with, we have a headline such as:
 
     "the fascinating case for eating lab-grown meat"
 
-Firstly, I used nltk to remove the stopwords - common words such as "a, the, it":
+Which is labeled either 0 for non-sarcastic, or 1 for sarcastic.
+
+Firstly, I used nltk to remove the stopwords - common words such as "a", "the", "it":
 
     "fascinating case eating lab-grown meat"
 
