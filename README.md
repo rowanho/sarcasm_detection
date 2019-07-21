@@ -17,7 +17,7 @@ You then need to download some nltk packages. In a python shell:
 
 `import nltk`
 
-`nltk.download('stopwords')
+`nltk.download('stopwords')`
 
 `nltk.download('wordnet')`
 
