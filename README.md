@@ -9,13 +9,21 @@ with credit to https://rishabhmisra.github.io/publications/
 
 To run with anaconda, download and extract the dataset(place the folder in the same directory)
 
-Make an anaconda environment and run:
+Then run 
 
-    conda install --file requirements.txt
+`conda env create -f environment.yml`
+
+You then need to download some nltk packages. In a python shell:
+
+`import nltk`
+
+`nltk.download('stopwords')
+
+`nltk.download('wordnet')`
 
 Then to train and evaluate the model, run:
 
-    python main.py
+`python main.py`
 
 
 ## Implementation
