@@ -22,7 +22,7 @@ def lemmatize_headline(headline):
             new_headline.append(lemmatizer.lemmatize(w))
     return new_headline
 
-#generates dictionary mapping of words to numbers
+# generates dictionary mapping of words to numbers
 def generate_mapping(headlines):
     #start at 1 - reserve 0 for padding
     index = 1
@@ -40,7 +40,7 @@ def main():
     cached_file = "cached_mapped_headlines.csv"
 
     data = pd.read_json(PATH + file,lines=True)
-    #for now, let's not consider the article link
+    # for now, let's not consider the article link
     data.pop('article_link')
 
     labels = data.pop('is_sarcastic')
