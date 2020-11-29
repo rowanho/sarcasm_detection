@@ -5,9 +5,6 @@ import numpy as np
 import pandas as pd
 
 import matplotlib.pyplot as plt
-#input pandas dataframes of the lemmatized headlines and labels
-
-
 
 
 # the model implementation using an embedding layer, and padded numerical
@@ -35,7 +32,7 @@ class implement_model():
         self.final_res = new_model.evaluate(x=test_data[0],y=test_data[1])
         new_model.save("saved_model.h5")
 
-    #splits into training & test sets
+    # splits into training & test sets
     def split_data(self,headlines,labels,test_prop):
         l = len(headlines) -1
 
